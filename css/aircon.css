@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/*---------------reset----------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  background: url(../images/body_bgimg.jpg) repeat;
+	line-height: 1;
+	color: #333;
+	font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------- */
+.main {
+  color: #333;
+  font-weight: normal;
+  max-width: 100vw;
+  letter-spacing: 2px;
+  line-height: 2rem;
+  font-size: 1.25rem; /*12.5px*/
+}
+.main-section {
+  width: 100%;
+  margin-bottom: 200px;
+}
+.main-section .main-title { /*-----タイトル-----*/
+  margin: 0 auto 100px;
+  padding-top: 100px;
+  text-align: center;
+  text-shadow: 4px 4px 30px #898989;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 40px;
+}
+.unit_1 {/*---- ユニットブロック１ ----*/
+  display: flex;
+  height: 80vh;
+  max-height: 800px;
+  position: relative; /*relative*/
+  align-items: center; /*縦中央揃え*/
+}
+.unit_1 .wrapper {/*---- テキストエリア ラッパー ----*/
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  height: 75%;
+  flex-basis: 55%;
+  padding: 30px;
+  z-index: 5;
+  box-shadow: 1px 1px 20px -2px;
+  position: relative;
+}
+.unit_1 .wrapper .text-area {/*---- テキストエリア ----*/
+  position: absolute;
+  top: 0; /*中央揃え*/
+  right: 0; /*中央揃え*/
+  bottom: 0; /*中央揃え*/
+  left: 0; /*中央揃え*/
+  margin: auto; /*中央揃え*/
+  width: 70%;
+  height: 75%;
+}
+.text-area .unit-title { /*テキストエリアタイトル*/
+  font-size: 2rem; /*20px*/
+  line-height: 3rem;
+  padding-bottom: 70px;
+  z-index: 6; 
+}
+.text-area .unit-text {/*---- 説明文 ----*/
+  display: inline-block;
+  font-size: 1rem; /*10px*/
+  line-height: 2rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  z-index: 7;
+}
+.text-area .unit-text .unit-span {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.unit_1 .unit-image img{/*----- 画像 -----*/
+  background: #ccc;
+  width: 50%;
+  height: 100%;
+  background-position: center center;/*位置が中心*/
+  object-fit: cover; /*トリミング*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+.unit-ever {/*---- ユニットブロック２ ----*/
+  flex-direction: row-reverse;
+}
+.unit-ever .unit-image img{/*----- 画像 -----*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-position: center center;
+  object-fit: cover; /*トリミング*/
+  z-index: 3;
+}
+@media screen and (min-width: 768px) and (max-width: 959.98px) {
+  .main-section {
+    margin-bottom: 100px;
+  }
+  .main-section .unit_1,
+  .main-section .unit_2{
+    height: 55vh;
+  }
+  .unit_1 .wrapper .text-area,
+  .unit_2 .wrapper .text-area{
+    width: 75%;
+  }
+  .text-area .unit-title {
+    font-size: 1.75rem;
+    padding-bottom: 30px;
+  }
+  .text-area .unit-text {
+    font-size: .9rem;
+    line-height: 1.5rem;
+  }
+}
+
+
+@media screen and (max-width: 767.98px) {
+  .main-section {
+    margin-bottom: 20px;
+  }
+  .main-section .unit_1 {
+    display: block;
+    max-height: 600px;
+    margin-bottom: 80px;
+  }
+  .unit_1 .wrapper {
+    height: 50%;
+    width: 100%;
+  }
+  .unit_1 .unit-image {
+    height: 50%;
+  }
+  .unit_1 .wrapper .text-area {
+    width: 75%;
+    height: 75%;
+  }
+  .text-area .unit-title {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+  }
+  .text-area .unit-text {
+    font-size: .75rem;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+  }
+  .unit_1 .unit-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+}
