@@ -164,20 +164,27 @@ table {
   .main-section {
     margin-bottom: 20px;
   }
+  .main-section .main-title {
+    padding-top: 64px;
+  }
   .main-section .unit_1 {
     display: block;
-    max-height: 600px;
-    margin-bottom: 80px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  .main-section .main-title {
+    font-size: 32px;
   }
   .unit_1 .wrapper {
     height: 50%;
     width: 100%;
   }
   .unit_1 .unit-image {
-    height: 50%;
+    height: auto;
   }
   .unit_1 .wrapper .text-area {
-    width: 75%;
+    position: static;
+    width: 90%;
     height: 75%;
   }
   .text-area .unit-title {
@@ -190,9 +197,11 @@ table {
     line-height: 1.5rem;
   }
   .unit_1 .unit-image img {
+    position: static;
     display: block;
     width: 100%;
     height: auto;
-    position: static;
+    max-height: 300px;
+    object-fit: cover;
   }
 }
